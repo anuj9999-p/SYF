@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+:root {
+  --cream: oklch(0.965 0.014 82);
+  --paper: oklch(0.985 0.009 83);
+  --ink: oklch(0.19 0.012 85);
+  --lime: oklch(0.88 0.2 121);
+  --rust: oklch(0.53 0.14 39);
+  --cobalt: oklch(0.43 0.2 264);
+  --radius: 0.5rem;
+}
+
+@theme {
+  --color-cream: var(--cream);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-lime: var(--lime);
+  --color-rust: var(--rust);
+  --color-cobalt: var(--cobalt);
+  --radius-syf: var(--radius);
+
+  --font-display: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --breakpoint-xs: 23.4375rem; /* 390px */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+::selection {
+  background: var(--color-lime);
+  color: var(--color-ink);
+}
+
+.focus-ring {
+  outline: none;
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid var(--color-cobalt);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.container-syf {
+  width: 100%;
+  max-width: 78rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 48rem) {
+  .container-syf {
+    padding-inline: 2.5rem;
+  }
+}
+
+.hairline {
+  border-color: color-mix(in oklch, var(--color-ink) 14%, transparent);
+}
+
+.text-balance {
+  text-wrap: balance;
+}

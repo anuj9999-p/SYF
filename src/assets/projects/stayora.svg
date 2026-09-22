@@ -1,0 +1,23 @@
+<svg viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="stayoraTitle">
+  <title id="stayoraTitle">STAYORA — boutique hotel concept cover art</title>
+  <rect width="640" height="480" fill="#E7C9A8"/>
+  <rect width="640" height="480" fill="#D97757" opacity="0.08"/>
+  <g stroke="#8C3F22" stroke-width="1.5" fill="none" opacity="0.55">
+    <path d="M60 420 V240 C60 160 130 100 220 100 C310 100 380 160 380 240 V420"/>
+    <path d="M140 420 V260 C140 200 175 160 220 160 C265 160 300 200 300 260 V420"/>
+  </g>
+  <g fill="#8C3F22">
+    <circle cx="500" cy="120" r="3"/>
+    <circle cx="530" cy="150" r="3"/>
+    <circle cx="470" cy="150" r="3"/>
+  </g>
+  <line x1="60" y1="420" x2="580" y2="420" stroke="#3A2317" stroke-width="1"/>
+  <text x="60" y="70" font-family="Georgia, serif" font-size="22" letter-spacing="4" fill="#3A2317">STAYORA</text>
+  <text x="60" y="450" font-family="Georgia, serif" font-size="12" letter-spacing="2" fill="#6B4A34">HOSPITALITY — CONCEPT</text>
+  <g stroke="#3A2317" stroke-width="1" opacity="0.4">
+    <line x1="420" y1="100" x2="580" y2="100"/>
+    <line x1="420" y1="100" x2="420" y2="260"/>
+    <line x1="580" y1="100" x2="580" y2="260"/>
+    <line x1="420" y1="260" x2="580" y2="260"/>
+  </g>
+</svg>
