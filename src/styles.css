@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+:root {
+  /* Dark theme: token names are kept stable (cream/paper/ink) so every
+     existing text-ink / bg-cream / border-ink utility across the app
+     continues to compose correctly — only the underlying values flip. */
+  --cream: oklch(0.16 0.014 78);   /* page background — near-black, warm-tinted */
+  --paper: oklch(0.225 0.015 78);  /* elevated surface — cards, inputs, chrome */
+  --ink: oklch(0.965 0.01 83);     /* foreground text — off-white */
+  --void: oklch(0.09 0.012 75);    /* deepest surface — logo chips, final CTA */
+  --lime: oklch(0.88 0.22 126);
+  --rust: oklch(0.64 0.17 39);
+  --cobalt: oklch(0.62 0.19 264);
+  --radius: 0.5rem;
+}
+
+@theme {
+  --color-cream: var(--cream);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-void: var(--void);
+  --color-lime: var(--lime);
+  --color-rust: var(--rust);
+  --color-cobalt: var(--cobalt);
+  --radius-syf: var(--radius);
+
+  --font-display: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --breakpoint-xs: 23.4375rem; /* 390px */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-cream);
+  background-image:
+    radial-gradient(60rem 34rem at 12% -8%, color-mix(in oklch, var(--color-cobalt) 16%, transparent), transparent 60%),
+    radial-gradient(50rem 30rem at 108% 12%, color-mix(in oklch, var(--color-rust) 14%, transparent), transparent 60%),
+    radial-gradient(46rem 26rem at 50% 118%, color-mix(in oklch, var(--color-lime) 8%, transparent), transparent 60%);
+  background-attachment: fixed;
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+::selection {
+  background: var(--color-lime);
+  color: var(--color-cream);
+}
+
+.focus-ring {
+  outline: none;
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid var(--color-cobalt);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.container-syf {
+  width: 100%;
+  max-width: 78rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 48rem) {
+  .container-syf {
+    padding-inline: 2.5rem;
+  }
+}
+
+.hairline {
+  border-color: color-mix(in oklch, var(--color-ink) 14%, transparent);
+}
+
+.text-balance {
+  text-wrap: balance;
+}

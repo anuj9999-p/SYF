@@ -1,0 +1,21 @@
+<svg viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="insightTitle">
+  <title id="insightTitle">INSIGHT AI — AI assistant concept cover art</title>
+  <rect width="640" height="480" fill="#1E2016"/>
+  <g stroke="#C8F169" stroke-width="1" opacity="0.55">
+    <line x1="150" y1="140" x2="300" y2="200"/>
+    <line x1="300" y1="200" x2="470" y2="150"/>
+    <line x1="300" y1="200" x2="260" y2="330"/>
+    <line x1="260" y1="330" x2="420" y2="360"/>
+    <line x1="150" y1="140" x2="260" y2="330"/>
+    <line x1="470" y1="150" x2="420" y2="360"/>
+  </g>
+  <g fill="#C8F169">
+    <circle cx="150" cy="140" r="5"/>
+    <circle cx="300" cy="200" r="7"/>
+    <circle cx="470" cy="150" r="5"/>
+    <circle cx="260" cy="330" r="5"/>
+    <circle cx="420" cy="360" r="5"/>
+  </g>
+  <text x="60" y="70" font-family="Georgia, serif" font-size="22" letter-spacing="3" fill="#F4F1E8">INSIGHT AI</text>
+  <text x="60" y="450" font-family="Georgia, serif" font-size="12" letter-spacing="2" fill="#C8F169">AI / WEB APPLICATION — DEMO</text>
+</svg>
